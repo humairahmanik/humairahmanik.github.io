@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=defice-width, initial-scale=1.0"
   </head>
   <body>
-    <h1>WEB Perpustakaan Pribadi Humairah</h1>
+    <h1>Perpustakaan Pribadi Humairah</h1>
     <h2><a href="https://www.perpusnas.go.id/">Kerjasama Perpustakaan</a></h2>
     <p><b>Halo semuanya, perkenalkan saya Humairah.</b></p>
     <b><i>Ini adalah website pertama saya yang berisi koleksi pribadi milik saya</i></b>
