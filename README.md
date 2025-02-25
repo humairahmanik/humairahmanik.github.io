@@ -16,5 +16,5 @@
           <tr><td>Koleksi Pribadi</td><td>Koleksi Umum</td></tr>
     <table>
 </table>
-<a href="Koleksi Pribadi"><Koleksi Pribadi></a>
+<a href="About me"></a>
 <a href="Contact us"></a>
