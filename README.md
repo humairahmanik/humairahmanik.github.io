@@ -16,4 +16,5 @@
           <tr><td>Koleksi Pribadi</td><td>Koleksi Umum</td></tr>
     <table>
 </table>
-<a href="Tugas Humairah">D:\Pengembangan web\Tugas Humairah</a>
+<a href="About me"></a>
+<a href="Contact us"></a>
