@@ -1,7 +1,14 @@
 <html>
-<Perpustakaan Pribadi>
-<title>Homepage saya</title>
-</head>
-<1. About Me
-Perpustakaan ini adalah perpustakaan pribadi milik Humairah Hunaifiyah Al-Layalin Manik dengan NIM 220709077 untuk mata kuliah Pengembangan Web>
+  <head>
+    <title>"Web Humairah"</title>
+    <meta cherset="UTF-8>
+    <meta name="viewport" content="width=defice-width, initial-scale=1.0"
+  </head>
+  <body>
+    <h1>WEB Perpustakaan Pribadi Humairah</h1>
+    <h2><a href="https://www.perpusnas.go.id/">Kerjasama Perpustakaan</a></h2>
+    <p><b>Halo semuanya, perkenalkan saya Humairah.</b></p>
+    <b><i>Ini adalah website pertama saya yang berisi koleksi pribadi milik saya</i></b>
+  </body>
+</html>
 
