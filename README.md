@@ -11,4 +11,8 @@
     <b><i>Ini adalah website pertama saya yang berisi koleksi pribadi milik saya</i></b>
   </body>
 </html>
-
+<body>
+    <table border="1">
+          <tr><td>Koleksi Pribadi</td><td>Koleksi Umum</td></tr>
+    <table>
+</table>
