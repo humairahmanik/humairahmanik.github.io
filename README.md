@@ -16,4 +16,4 @@
           <tr><td>Koleksi Pribadi</td><td>Koleksi Umum</td></tr>
     <table>
 </table>
-<a href="Koleksi Pribadi"</a>
+<button>"Koleksi Pribadi"</button>
