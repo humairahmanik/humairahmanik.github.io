@@ -7,8 +7,8 @@
   <body>
     <h1>Perpustakaan Pribadi Humairah</h1>
     <h2><a href="https://www.perpusnas.go.id/">Kerjasama Perpustakaan</a></h2>
-    <p><b>Halo semuanya, perkenalkan saya Humairah.</b></p>
-    <b><i>Ini adalah website pertama saya yang berisi koleksi pribadi milik saya</i></b>
+    <p><b>Halo semuanya, perkenalkan saya mahasiswa prodi Perpustakaan dan Sains Informasi dari Universitas Sumatera Utara dengan NIM 220709077</b></p>
+    <b><i>Ini adalah website pertama saya yang berisi koleksi pribadi milik saya dan koleksi lainnya</i></b>
   </body>
 </html>
 <body>
@@ -16,3 +16,4 @@
           <tr><td>Koleksi Pribadi</td><td>Koleksi Umum</td></tr>
     <table>
 </table>
+<a href="Koleksi Pribadi"></a>
