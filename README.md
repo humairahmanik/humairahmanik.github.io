@@ -1,9 +1,6 @@
 <html>
   <head>
     <title>"Web Humairah"</title>
-    <meta cherset="UTF-8>
-    <meta name="viewport" content="width=defice-width, initial-scale=1.0">
-    <title>Menu navbar</title>
   </head>
   <body>
     <h1>Perpustakaan Pribadi Humairah</h1>
