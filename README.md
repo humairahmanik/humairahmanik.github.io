@@ -9,7 +9,7 @@
     <b><i>Ini adalah website pertama saya yang berisi koleksi pribadi milik saya dan koleksi lainnya</i></b>
    
 <ul>
-    <li><a href="biodata.html">About Me</a></li>
+    <li><a href="Biodata.html">About Me</a></li>
     <li><a href="form.html">Contact Us</a></li>
 </ul>
             
