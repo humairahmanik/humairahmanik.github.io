@@ -12,11 +12,7 @@
 <ul>
     <li><a href="Biodata.html">About Me</a></li>
     <li><a href="form.html">Contact Us</a></li>
-</ul>
-            
-  
-                    
-             
+</ul>       
   </body>
 </html>
 <body>
