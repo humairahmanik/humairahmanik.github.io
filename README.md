@@ -1,7 +1,5 @@
 <html>
   <head>
-    <title>"Web Humairah"</title>
-  </head>
   <body>
     <h1>Perpustakaan Pribadi Humairah</h1>
     <h2>Welcome</h2>   
