@@ -133,59 +133,6 @@
      </footer>
     <!-- Footer end-->
 
-    <!-- Animation -->
-    <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animasi Sederhana</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .box {
-            width: 100px;
-            height: 100px;
-            background-color: #3498db;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
-        }
-
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="box"></div>
-<button onclick="changeColor()">Ganti Warna</button>
-
-<script>
-    function changeColor() {
-        const box = document.querySelector('.box');
-        box.style.backgroundColor = box.style.backgroundColor === 'red' ? '#3498db' : 'red';
-    }
-</script>
-
     <!-- Feather Icons -->
     <script>
         feather.replace();
