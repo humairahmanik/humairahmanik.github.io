@@ -30,7 +30,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.8 rem 7%;
-  background-color: rgb(255, 211, 234); 0,8);
+  background-color: rgb(255, 211, 234); 0,8;
   border-bottom: 1px solid #e1b5d1;
   position: fixed;
   top: 0;
@@ -210,12 +210,12 @@ body {
     line-height: 2rem;
 }
 
-.collection .row [
+.collection .row {
     display: flex;
     flex-wrap: wrap;
     margin-top: 3rem;
-    justify-content: center;
-]
+    justify-content: center; 
+}
 
 .collection .row .collection-card {
     text-align: center;
@@ -236,6 +236,12 @@ body {
     display: flex;
     margin-top: 2rem;
     background-color: #fff0f9;
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
 }
 .contact .row form {
   flex: 1 1 45rem;
@@ -379,6 +385,18 @@ footer .credit {
 
 .collection p {
 font-size: 1.2rem;
+}
+
+.contact .row {
+    flex-wrap: wrap;
+}
+
+.contact .row .map {
+    height: 30rem;
+}
+
+.contact .row form {
+    padding-top: 0;
 }
 }
 
