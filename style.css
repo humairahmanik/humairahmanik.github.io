@@ -311,6 +311,33 @@ footer .credit {
     font-size: 0.8rem;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: relative;
+    animation: gerak 2s infinite alternate;
+}
+
+@keyframes gerak {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(300px);
+    }
+}
+
+
 /* Media Queries */
 
 /* Laptop */
