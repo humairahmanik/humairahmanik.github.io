@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkFadeIn);
     checkFadeIn();
 });
+
+document.querySelectorAll('.collection-card').forEach(card => {
+    card.addEventListener('click', function() {
+        card.style.transition = 'transform 0.7s cubic-bezier(.25,.8,.25,1)';
+        card.style.transform = 'rotateY(360deg)';
+        setTimeout(() => {
+            card.style.transform = '';
+        }, 700);
+    });
+});
+
 // Klik di luar sidebar untuk menghilangkan nav
 const align-justify = document.querySelector('#align-justify');
 
