@@ -22,6 +22,18 @@ body {
     min-height: 2000px;
 }
 
+.collection-card {
+    transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: #fff;
+}
+.collection-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+
 /* Search Form */
 .search-form {
     display: flex;
@@ -45,9 +57,20 @@ body {
     transition: background-color 0.3s ease;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(.25,.8,.25,1), transform 0.8s;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: none;
+}
+
 .search-form button:hover {
     background-color: var(--button-hover);
 }
+
 
 /* Navbar */
 .navbar {
