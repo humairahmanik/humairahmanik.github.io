@@ -55,7 +55,7 @@
                                     <div class="col-lg-6">
                                         <div class="p-4">
                                             <h4 class="text-primary mb-3">Lokasi</h4>
-                                            <div class="map-container" style="height: 400px; border-radius: 10px; overflow: hidden;">
+                                            <div class="map-container">
                                                 <iframe 
                                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.1295804662286!2d98.6332565!3d3.5576107000000077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312f95d02ee9ed%3A0xe2cf2d620cbd5674!2sGg.%20Sapto%20Argo%2C%20Tj.%20Sari%2C%20Kec.%20Medan%20Selayang%2C%20Kota%20Medan%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1742294844364!5m2!1sid!2sid" 
                                                     width="100%" 
@@ -74,24 +74,29 @@
                                         <div class="p-4">
                                             <h4 class="text-primary mb-3">Kirim Pesan</h4>
                                             <form id="contactForm" action="https://formsubmit.co/humairahhunaifiyah@students.usu.ac.id" method="POST">
+                                                <!-- Input tersembunyi untuk FormSubmit (opsional) -->
+                                                <input type="hidden" name="_subject" value="Pesan Baru dari Website Perpustakaan Humairah">
+                                                <input type="hidden" name="_next" value="https://humairahmanik.github.io/ContactMe.html?status=success"> <!-- Ganti dengan URL halaman terima kasih Anda -->
+                                                <input type="hidden" name="_captcha" value="false"> <!-- Nonaktifkan captcha default FormSubmit jika diinginkan, atau biarkan aktif -->
+
                                                 <div class="mb-3">
                                                     <label for="name" class="form-label">Nama</label>
-                                                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama Anda" required>
+                                                    <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama Anda" required>
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label for="email" class="form-label">Email</label>
-                                                    <input type="email" class="form-control" id="email" placeholder="Masukkan email Anda" required>
+                                                    <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda" required>
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label for="phone" class="form-label">Nomor Telepon</label>
-                                                    <input type="tel" class="form-control" id="phone" placeholder="Masukkan nomor telepon Anda">
+                                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda">
                                                 </div>
 
                                                 <div class="mb-3">
                                                     <label for="message" class="form-label">Pesan</label>
-                                                    <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan Anda" required></textarea>
+                                                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Tulis pesan Anda" required></textarea>
                                                 </div>
 
                                                 <button type="submit" class="btn btn-primary w-100">
@@ -145,29 +150,41 @@
     <script>feather.replace();</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Contact Form Script -->
+    <!-- Contact Form Script (Disesuaikan) -->
     <script>
+        // Anda bisa menghapus script ini jika hanya mengandalkan pengiriman standar FormSubmit
+        // atau memodifikasinya untuk menampilkan pesan sukses setelah redirect dari FormSubmit
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('status') && urlParams.get('status') === 'success') {
+                // Tampilkan pesan sukses kustom jika diperlukan, misalnya menggunakan modal Bootstrap
+                // Untuk saat ini, kita bisa tambahkan alert sederhana
+                alert('Terima kasih! Pesan Anda telah berhasil dikirim.');
+                // Hapus parameter status dari URL agar tidak muncul lagi saat refresh
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
+
+        // Jika Anda ingin tetap ada validasi sisi klien sebelum submit ke FormSubmit,
+        // Anda bisa membiarkan bagian validasi dari script sebelumnya,
+        // tetapi HAPUS e.preventDefault() dan this.reset() agar form tetap tersubmit.
+        // Contoh:
+        /*
         document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
             // Get form data
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
             
             // Simple validation
             if (!name || !email || !message) {
                 alert('Mohon lengkapi semua field yang wajib diisi');
+                e.preventDefault(); // Hentikan submit HANYA jika validasi gagal
                 return;
             }
-            
-            // Show success message (in real application, you would send this data to a server)
-            alert('Terima kasih! Pesan Anda telah berhasil dikirim.');
-            
-            // Reset form
-            this.reset();
+            // Jika validasi lolos, form akan tersubmit secara alami ke FormSubmit.co
         });
+        */
     </script>
 </body>
 </html>

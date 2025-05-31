@@ -47,7 +47,7 @@
                 <div class="col-lg-8">
                     <h1 class="display-4 fw-bold mb-4">Selamat Datang di <span class="text-primary">Perpustakaan Saya</span></h1>
                     <p class="lead mb-4">Website ini saya buat sebagai wadah untuk menyimpan, mengorganisir, dan membagikan berbagai tugas, materi, serta koleksi pribadi yang telah saya kumpulkan sepanjang perjalanan akademik dan pribadi saya.</p>
-                    <div class="d-flex gap-3 justify-content-center">
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
                         <a href="MyCollection.html" class="btn btn-primary btn-lg">Lihat Koleksi</a>
                         <a href="TentangSaya.html" class="btn btn-outline-primary btn-lg">Tentang Saya</a>
                     </div>
@@ -95,47 +95,47 @@
             </div>
             <div class="row">
                 <!-- Book 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm favorite-book-card">
-                        <img src="img/collection/1.jpg" class="card-img-top favorite-book-img" alt="Buku Favorit 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Sapiens: Riwayat Singkat Umat Manusia</h5>
-                            <p class="card-text text-muted small">Yuval Noah Harari</p>
-                            <div class="book-info d-none mt-2">
-                                <p class="small">Buku ini menjelajahi sejarah umat manusia dari evolusi manusia purba di Zaman Batu hingga abad ke-21.</p>
+                <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="sejarah" data-title="sapiens riwayat singkat umat manusia">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <img src="https://m.media-amazon.com/images/I/713jIoMO3UL._AC_UF1000,1000_QL80_.jpg" class="card-img-top collection-book-img" alt="Sapiens">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Sapiens</h5>
+                                <p class="card-text text-muted small">Yuval Noah Harari</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Menjelajahi sejarah umat manusia dari Zaman Batu hingga abad ke-21.</p>
+                                </div>
+                                <button class="btn btn-primary btn-sm mt-2 toggle-details-btn">Info Detail</button>
                             </div>
-                            <button class="btn btn-outline-primary btn-sm mt-2 toggle-info-btn">Info Detail</button>
                         </div>
                     </div>
-                </div>
-                <!-- Book 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm favorite-book-card">
-                        <img src="img/collection/2.jpg" class="card-img-top favorite-book-img" alt="Buku Favorit 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Atomic Habits</h5>
-                            <p class="card-text text-muted small">James Clear</p>
-                            <div class="book-info d-none mt-2">
-                                <p class="small">Panduan praktis tentang cara membentuk kebiasaan baik, menghilangkan kebiasaan buruk, dan membuat perubahan kecil yang menghasilkan hasil luar biasa.</p>
+                    <!-- Book 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="non-fiksi" data-title="atomic habits perubahan kecil hasil luar biasa">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <img src="https://m.media-amazon.com/images/I/41wuB-s8vRL._SL500_.jpg" class="card-img-top collection-book-img" alt="Atomic Habits">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Atomic Habits</h5>
+                                <p class="card-text text-muted small">James Clear</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Panduan membentuk kebiasaan baik dan menghilangkan kebiasaan buruk.</p>
+                                </div>
+                                <button class="btn btn-success btn-sm mt-2 toggle-details-btn">Info Detail</button>
                             </div>
-                            <button class="btn btn-outline-success btn-sm mt-2 toggle-info-btn">Info Detail</button>
                         </div>
                     </div>
-                </div>
-                <!-- Book 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100 shadow-sm favorite-book-card">
-                        <img src="img/collection/3.jpg" class="card-img-top favorite-book-img" alt="Buku Favorit 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Kosmos</h5>
-                            <p class="card-text text-muted small">Carl Sagan</p>
-                            <div class="book-info d-none mt-2">
-                                <p class="small">Sebuah perjalanan epik melintasi ruang dan waktu, menjelajahi keajaiban alam semesta dan tempat kita di dalamnya.</p>
+                    <!-- Book 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="sains" data-title="kosmos perjalanan alam semesta">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <img src="https://m.media-amazon.com/images/I/710C5x4MzwL._AC_UF1000,1000_QL80_.jpg" class="card-img-top collection-book-img" alt="Kosmos">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Kosmos</h5>
+                                <p class="card-text text-muted small">Carl Sagan</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Perjalanan epik melintasi ruang dan waktu, menjelajahi keajaiban alam semesta.</p>
+                                </div>
+                                <button class="btn btn-warning btn-sm mt-2 toggle-details-btn">Info Detail</button>
                             </div>
-                            <button class="btn btn-outline-warning btn-sm mt-2 toggle-info-btn">Info Detail</button>
                         </div>
                     </div>
-                </div>
             </div>
             <div class="text-center mt-4">
                 <a href="MyCollection.html" class="btn btn-primary">Lihat Koleksi Selengkapnya <i data-feather="arrow-right" class="ms-1" style="width: 16px; height: 16px;"></i></a>
