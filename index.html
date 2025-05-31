@@ -101,10 +101,8 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title">Sapiens</h5>
                                 <p class="card-text text-muted small">Yuval Noah Harari</p>
-                                <div class="book-details d-none mt-2">
-                                    <p class="small">Menjelajahi sejarah umat manusia dari Zaman Batu hingga abad ke-21.</p>
-                                </div>
-                                <button class="btn btn-primary btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                                <!-- Tombol Info Detail diubah untuk memicu modal -->
+                                <button class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#sapiensModal">Info Detail</button>
                             </div>
                         </div>
                     </div>
@@ -115,10 +113,8 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title">Atomic Habits</h5>
                                 <p class="card-text text-muted small">James Clear</p>
-                                <div class="book-details d-none mt-2">
-                                    <p class="small">Panduan membentuk kebiasaan baik dan menghilangkan kebiasaan buruk.</p>
-                                </div>
-                                <button class="btn btn-success btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                                <!-- Tombol Info Detail diubah untuk memicu modal -->
+                                <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#atomicHabitsModal">Info Detail</button>
                             </div>
                         </div>
                     </div>
@@ -129,10 +125,8 @@
                             <div class="card-body text-center">
                                 <h5 class="card-title">Kosmos</h5>
                                 <p class="card-text text-muted small">Carl Sagan</p>
-                                <div class="book-details d-none mt-2">
-                                    <p class="small">Perjalanan epik melintasi ruang dan waktu, menjelajahi keajaiban alam semesta.</p>
-                                </div>
-                                <button class="btn btn-warning btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                                <!-- Tombol Info Detail diubah untuk memicu modal -->
+                                <button class="btn btn-warning btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#kosmosModal">Info Detail</button>
                             </div>
                         </div>
                     </div>
@@ -142,6 +136,89 @@
             </div>
         </div>
     </section>
+
+    <!-- Book Detail Modals for Koleksi Favorit -->
+    <!-- Modal Sapiens -->
+    <div class="modal fade" id="sapiensModal" tabindex="-1" aria-labelledby="sapiensModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sapiensModalLabel">Sapiens: Riwayat Singkat Umat Manusia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="https://m.media-amazon.com/images/I/713jIoMO3UL._AC_UF1000,1000_QL80_.jpg" class="img-fluid rounded mb-3" alt="Sapiens Cover">
+                        </div>
+                        <div class="col-md-8">
+                            <p><strong>Penulis:</strong> Yuval Noah Harari</p>
+                            <p><strong>Deskripsi:</strong></p>
+                            <p>Buku ini menjelajahi sejarah umat manusia dari evolusi manusia purba di Zaman Batu hingga abad ke-21. Harari memadukan sejarah dan sains untuk mempertanyakan narasi-narasi yang telah membentuk peradaban kita, membahas bagaimana Homo sapiens berhasil mendominasi planet ini, dan apa yang mungkin terjadi di masa depan.</p>
+                            <!-- Anda bisa menambahkan detail lain seperti ISBN, penerbit, tahun terbit, dll. -->
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Atomic Habits -->
+    <div class="modal fade" id="atomicHabitsModal" tabindex="-1" aria-labelledby="atomicHabitsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="atomicHabitsModalLabel">Atomic Habits</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                     <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="https://m.media-amazon.com/images/I/41wuB-s8vRL._SL500_.jpg" class="img-fluid rounded mb-3" alt="Atomic Habits Cover">
+                        </div>
+                        <div class="col-md-8">
+                            <p><strong>Penulis:</strong> James Clear</p>
+                            <p><strong>Deskripsi:</strong></p>
+                            <p>Panduan praktis tentang cara membentuk kebiasaan baik, menghilangkan kebiasaan buruk, dan membuat perubahan kecil yang menghasilkan hasil luar biasa. Clear menyajikan kerangka kerja berbasis bukti untuk perbaikan diri, menjelaskan bagaimana perubahan kecil dapat menghasilkan efek gabungan yang signifikan dari waktu ke waktu.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Kosmos -->
+    <div class="modal fade" id="kosmosModal" tabindex="-1" aria-labelledby="kosmosModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="kosmosModalLabel">Kosmos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="https://m.media-amazon.com/images/I/710C5x4MzwL._AC_UF1000,1000_QL80_.jpg" class="img-fluid rounded mb-3" alt="Kosmos Cover">
+                        </div>
+                        <div class="col-md-8">
+                            <p><strong>Penulis:</strong> Carl Sagan</p>
+                            <p><strong>Deskripsi:</strong></p>
+                            <p>Sebuah perjalanan epik melintasi ruang dan waktu, menjelajahi keajaiban alam semesta dan tempat kita di dalamnya. Berdasarkan serial televisi PBS yang terkenal, buku ini membahas berbagai topik ilmiah, mulai dari asal usul kehidupan hingga eksplorasi planet lain, dengan gaya penulisan yang memukau dan mudah diakses.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Event Section -->
     <section class="py-5 bg-light">
@@ -254,16 +331,6 @@
     <script>feather.replace();</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Script untuk toggle info buku favorit
-        document.querySelectorAll('.toggle-info-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const bookInfo = this.closest('.card-body').querySelector('.book-info');
-                const isHidden = bookInfo.classList.contains('d-none');
-                bookInfo.classList.toggle('d-none');
-                this.textContent = isHidden ? 'Sembunyikan Info' : 'Info Detail';
-            });
-        });
-
         // Cookie Consent Script
         document.addEventListener('DOMContentLoaded', function() {
             const cookieBanner = document.getElementById('cookieConsentBanner');
