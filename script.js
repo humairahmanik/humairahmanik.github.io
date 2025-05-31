@@ -1,5 +1,5 @@
 // Toggle class active
-const navbarNav = document.querySelector ('.navbar-nav');
+const navbarNav = document.querySelector('.navbar-nav');
 
 // ketika menu di klik
 document.querySelector('#align-justify').onclick = () => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function checkFadeIn() {
         fadeEls.forEach(el => {
             const rect = el.getBoundingClientRect();
-            if(rect.top < window.innerHeight - 100) {
+            if (rect.top < window.innerHeight - 100) {
                 el.classList.add('visible');
             }
         });
@@ -32,10 +32,10 @@ document.querySelectorAll('.collection-card').forEach(card => {
 });
 
 // Klik di luar sidebar untuk menghilangkan nav
-const align-justify = document.querySelector('#align-justify');
+const alignJustify = document.querySelector('#align-justify');
 
 document.addEventListener('click', function(e) {
-    if(!align-justify.contains(e.target) && !navbarNav.contains(e.target)) {
+    if (!alignJustify.contains(e.target) && !navbarNav.contains(e.target)) {
         navbarNav.classList.remove('active');
     }
 });

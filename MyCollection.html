@@ -1,21 +1,273 @@
-    <!-- Collection start-->
-     <section id="collection" class="collection">
-        <h2><span>My</span> Collection</h2>
-        <p>Di dalam koleksi ini terdapat beberapa tugas yang telah saya kerjakan dan beberapa koleksi yang saya miliki</p>
-
-        <div class="row">
-            <div class="collection-card">
-                <img src="img/collection/1.jpg.jpg" alt="Tugas" class="collection-card-img">
-                <h3 class="collection-card-title">- Tugas -</h3>
-            </div>
-            <div class="collection-card">
-                <img src="img/collection/2.jpg.jpg" alt="Koleksi Saya" class="collection-card-img">
-                <h3 class="collection-card-title">- Koleksi Saya -</h3>
-            </div>
-            <div class="collection-card">
-                <img src="img/collection/3.jpg.jpg" alt="Kerjasama Perpustakaan" class="collection-card-img">
-                <h3 class="collection-card-title">- Kerjasama Perpustakaan -</h3>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Collection - Library Humairah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Library<span class="text-primary">Humairah</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="TentangSaya.html">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="MyCollection.html">My Collection</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ContactMe.html">Contact Me</a>
+                    </li>
+                </ul>
             </div>
         </div>
-     </section>
-    <!-- Collection end-->
+    </nav>
+
+    <main class="main-content">
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bold mb-3"><span class="text-primary">My</span> Collection</h1>
+                    <p class="lead">Jelajahi berbagai koleksi buku yang tersedia di perpustakaan ini.</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-text">
+                                <i data-feather="search"></i>
+                            </span>
+                            <input type="text" class="form-control" id="searchInput" placeholder="Cari judul buku...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Buttons (Simplified for books) -->
+                <div class="text-center mb-4">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-primary active" data-filter="all">Semua</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="fiksi">Fiksi</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="non-fiksi">Non-Fiksi</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="sains">Sains</button>
+                        <button type="button" class="btn btn-outline-primary" data-filter="sejarah">Sejarah</button>
+                    </div>
+                </div>
+
+                <!-- Collection Grid -->
+                <div class="row" id="collectionGrid">
+                    <!-- Book 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="sejarah" data-title="sapiens riwayat singkat umat manusia">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <img src="img/collection/1.jpg" class="card-img-top collection-book-img" alt="Sapiens">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Sapiens</h5>
+                                <p class="card-text text-muted small">Yuval Noah Harari</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Menjelajahi sejarah umat manusia dari Zaman Batu hingga abad ke-21.</p>
+                                </div>
+                                <button class="btn btn-primary btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="non-fiksi" data-title="atomic habits perubahan kecil hasil luar biasa">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <img src="img/collection/2.jpg" class="card-img-top collection-book-img" alt="Atomic Habits">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Atomic Habits</h5>
+                                <p class="card-text text-muted small">James Clear</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Panduan membentuk kebiasaan baik dan menghilangkan kebiasaan buruk.</p>
+                                </div>
+                                <button class="btn btn-success btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="sains" data-title="kosmos perjalanan alam semesta">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <img src="img/collection/3.jpg" class="card-img-top collection-book-img" alt="Kosmos">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Kosmos</h5>
+                                <p class="card-text text-muted small">Carl Sagan</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Perjalanan epik melintasi ruang dan waktu, menjelajahi keajaiban alam semesta.</p>
+                                </div>
+                                <button class="btn btn-warning btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book 4 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="fiksi" data-title="laskar pelangi andrea hirata">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <div class="card-img-top d-flex align-items-center justify-content-center bg-info-subtle text-info" style="height: 200px; font-size: 4rem;">🌈</div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Laskar Pelangi</h5>
+                                <p class="card-text text-muted small">Andrea Hirata</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Kisah inspiratif tentang perjuangan anak-anak Belitung untuk mendapatkan pendidikan.</p>
+                                </div>
+                                <button class="btn btn-info btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book 5 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="fiksi" data-title="bumi manusia pramoedya ananta toer">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <div class="card-img-top d-flex align-items-center justify-content-center bg-danger-subtle text-danger" style="height: 200px; font-size: 4rem;">🌏</div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Bumi Manusia</h5>
+                                <p class="card-text text-muted small">Pramoedya Ananta Toer</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Novel sejarah yang menggambarkan kehidupan di Hindia Belanda pada awal abad ke-20.</p>
+                                </div>
+                                <button class="btn btn-danger btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book 6 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="non-fiksi" data-title="filosofi teras henry manampiring">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <div class="card-img-top d-flex align-items-center justify-content-center bg-secondary-subtle text-secondary" style="height: 200px; font-size: 4rem;">🏛️</div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Filosofi Teras</h5>
+                                <p class="card-text text-muted small">Henry Manampiring</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Mengajak pembaca untuk menerapkan filsafat Stoisisme dalam kehidupan sehari-hari.</p>
+                                </div>
+                                <button class="btn btn-secondary btn-sm mt-2 toggle-details-btn">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Book 7 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="sains" data-title="a brief history of time stephen hawking">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px; font-size: 4rem; background-color: #6f42c1; color:white;">⏳</div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">A Brief History of Time</h5>
+                                <p class="card-text text-muted small">Stephen Hawking</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Penjelasan populer tentang asal usul dan nasib alam semesta.</p>
+                                </div>
+                                <button class="btn btn-sm mt-2 toggle-details-btn" style="background-color: #6f42c1; color:white;">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book 8 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="sejarah" data-title="guns germs and steel jared diamond">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px; font-size: 4rem; background-color: #fd7e14; color:white;">🌍</div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Guns, Germs, and Steel</h5>
+                                <p class="card-text text-muted small">Jared Diamond</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Analisis mengapa peradaban Eurasia mendominasi dunia.</p>
+                                </div>
+                                <button class="btn btn-sm mt-2 toggle-details-btn" style="background-color: #fd7e14; color:white;">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Book 9 -->
+                    <div class="col-lg-4 col-md-6 mb-4 collection-item" data-category="fiksi" data-title="the lord of the rings jrr tolkien">
+                        <div class="card h-100 shadow-sm border-0 collection-card">
+                            <div class="card-img-top d-flex align-items-center justify-content-center" style="height: 200px; font-size: 4rem; background-color: #20c997; color:white;">💍</div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title">The Lord of the Rings</h5>
+                                <p class="card-text text-muted small">J.R.R. Tolkien</p>
+                                <div class="book-details d-none mt-2">
+                                    <p class="small">Epos fantasi klasik tentang perjuangan melawan kekuatan jahat di Middle-earth.</p>
+                                </div>
+                                <button class="btn btn-sm mt-2 toggle-details-btn" style="background-color: #20c997; color:white;">Info Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div id="noResults" class="text-center py-5" style="display: none;">
+                    <i data-feather="search" style="width: 64px; height: 64px;" class="text-muted mb-3"></i>
+                    <h4 class="text-muted">Tidak ada hasil ditemukan</h4>
+                    <p class="text-muted">Coba gunakan kata kunci yang berbeda atau filter lain.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 Library Humairah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>feather.replace();</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Search, Filter, and Book Detail Script -->
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const collectionItems = document.querySelectorAll('.collection-item');
+        const noResults = document.getElementById('noResults');
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const detailToggleButtons = document.querySelectorAll('.toggle-details-btn');
+
+        let currentFilter = 'all';
+
+        function searchAndFilterItems() {
+            const searchTerm = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+
+            collectionItems.forEach(item => {
+                const title = item.getAttribute('data-title').toLowerCase();
+                const category = item.getAttribute('data-category');
+                const matchesSearch = title.includes(searchTerm);
+                const matchesFilter = currentFilter === 'all' || category === currentFilter;
+
+                if (matchesSearch && matchesFilter) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('input', searchAndFilterItems);
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                currentFilter = this.getAttribute('data-filter');
+                searchAndFilterItems();
+            });
+        });
+
+        detailToggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const bookDetails = this.closest('.card-body').querySelector('.book-details');
+                const isHidden = bookDetails.classList.contains('d-none');
+                bookDetails.classList.toggle('d-none');
+                this.textContent = isHidden ? 'Sembunyikan Info' : 'Info Detail';
+            });
+        });
+        
+        // Initial call to display all items
+        searchAndFilterItems();
+    </script>
+</body>
+</html>
