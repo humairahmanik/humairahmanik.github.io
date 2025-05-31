@@ -79,24 +79,30 @@ body {
 
 /* Cards General */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: none; /* Hapus border default bootstrap jika ada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Tambahkan transisi untuk box-shadow */
+    border: none; /* Hapus border default jika ada */
 }
 
 .card:hover {
-    transform: translateY(-6px); /* Efek hover lebih terlihat */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.12) !important;
+    transform: translateY(-5px); /* Efek angkat sedikit saat hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Bayangan lebih jelas saat hover */
 }
 
 /* Favorite Book & Collection Card Specifics */
 .favorite-book-card .card-img-top,
-.collection-card .card-img-top {
+.collection-card .card-img-top { /* Ubah selector ini agar berlaku untuk semua card-img-top di collection-card */
     transition: transform 0.3s ease;
+    object-fit: cover; /* Pastikan gambar mengisi area tanpa distorsi, memotong jika perlu */
+    height: 220px; /* DIUBAH dari 250px menjadi 220px */
+    width: 100%; /* Pastikan lebar mengisi card */
+    display: flex; /* Tambahkan ini untuk placeholder div agar align-items dan justify-content bekerja */
+    align-items: center; /* Tambahkan ini untuk placeholder div */
+    justify-content: center; /* Tambahkan ini untuk placeholder div */
 }
 
 .favorite-book-card:hover .card-img-top,
-.collection-card:hover .card-img-top {
-    transform: scale(1.03); /* Sedikit zoom pada gambar/ikon saat hover card */
+.collection-card:hover .card-img-top { /* Selector ini sudah benar */
+    transform: scale(1.03);
 }
 
 .book-info, .book-details {
@@ -122,6 +128,13 @@ body {
     color: var(--white);
 }
 
+/* Contact Page Specific */
+.map-container {
+    height: 400px;
+    border-radius: 0.625rem; /* 10px */
+    overflow: hidden;
+    border: 1px solid #dee2e6; /* Bootstrap's default table border color */
+}
 
 /* Footer */
 .footer {
@@ -266,6 +279,10 @@ body {
         font-size: 0.875rem; /* Slightly smaller font, bisa juga 0.8rem jika perlu */
         word-break: break-word; /* Ensure long words break to prevent overflow */
         white-space: normal; /* Ensure text wraps normally */
+    }
+
+    .map-container { /* Adjust map height for small screens */
+        height: 300px;
     }
 }
 /* Custom Scrollbar */
